@@ -27,7 +27,7 @@ menu:
 params:
   description: "A website built through Hugo and blogdown."
   GitHubEdit: "https://github.com/phylsix/www/edit/master/content/"
-  footer: "&copy; [Weinan SI](https://phylsix.netlify.app/) 2021 | [github](https://github.com/phylsix) | [theme](https://themes.gohugo.io/hugo-xmin/) | [markdown](./post/2016/02/14/a-plain-markdown-post/)"
+  footer: "&copy; [Weinan SI](https://phylsix.netlify.app/) 2021 | [github](https://github.com/phylsix) | [theme](https://themes.gohugo.io/hugo-xmin/) | [markdown](./post/2016/02/14/hello-md/)"
 
 markup:
   goldmark:

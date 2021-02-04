@@ -4,23 +4,9 @@
     <hr />
     {{ . | markdownify }}
     {{ end }}
-    {{ if .File.Path }}
-    {{ $.Scratch.Set "FilePath" .File.Path }}
-    {{ $RmdFile := (print .File.BaseFileName ".Rmd") }}
-    {{ $Files := readDir (print "content/" .File.Dir) }}
-    {{ if (where $Files "Name" $RmdFile) }}
-    {{ $.Scratch.Set "FilePath" (print .File.Dir $RmdFile) }}
-    {{ else }}
-    {{ $RmdFile := (print .File.BaseFileName ".Rmarkdown") }}
-    {{ if (where $Files "Name" $RmdFile) }}
-    {{ $.Scratch.Set "FilePath" (print .File.Dir $RmdFile) }}
-    {{ end }}
-    {{ end }}
 
-    {{ with .Site.Params.GithubEdit}}
-    | <a href="{{ . }}{{ $.Scratch.Get " FilePath" }}">edit </a>
-    {{ end }}
-    {{ end }}
+    <!-- https://bookdown.org/yihui/blogdown/templates.html -->
+    | <a href="{{ .Site.Params.GithubEdit }}{{ .File.Path }}">edit </a>
 </footer>
 </body>
 
